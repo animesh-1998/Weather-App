@@ -10,7 +10,7 @@ const forecast = (latitude,longitude,callback) => {
             callback(undefined,"Something went wrong!Please try again with another search");
         }
         else{
-            callback(body.current.weather_descriptions[0]+".It is currently "+body.current.temperature+" degrees out.But it feels like "+body.current.feelslike+" degrees out there.",undefined);
+            callback(body.current.weather_descriptions[0]+".It is currently "+body.current.temperature+" degrees out.It feels like "+body.current.feelslike+" degrees out there.The humidity is "+body.current.humidity+"% and the wind speed is "+body.current.wind_speed+"km/hr.",undefined);
         }
     })
 }
